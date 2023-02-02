@@ -1,0 +1,18 @@
+.page-header {
+  line-height: 16px;
+  background-color: #336f3f;
+  color: #ffffff;
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.page-header__link {
+  display: none;
+}
+
+.page-header__site-nav {
+  display: flex;
+}
