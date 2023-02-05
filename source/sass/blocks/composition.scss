@@ -1,0 +1,70 @@
+.composition {
+  background-image: url("../img/composition-bg.png");
+  background-repeat: no-repeat;
+  background-position: center 37px;
+  background-size: 49.2%;
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url("../img/composition-bg@2x.png");
+  }
+
+  h3 {
+    @include font(60,60);
+    font-family: "CirceRounded", "Arial", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.composition__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.composition__item {
+  display: flex;
+  flex-direction: column;
+  width: 27.9%;
+  min-height: 366px;
+
+  &:nth-child(1) {
+    margin-right: 44.1%;
+    margin-bottom: 54px;
+  }
+
+  &:nth-child(2) {
+    margin-bottom: 54px;
+  }
+
+  &:nth-child(3) {
+    margin-left: 4.41%;
+    margin-right: 3.82%;
+  }
+
+  &:nth-child(4) {
+    margin-right: 3.52%;
+    margin-top: 164px;
+    min-height: 345px;
+  }
+
+  &:nth-child(5) {
+    margin-right: 4.41%;
+  }
+
+  img {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  h4 {
+    @include font(22,26);
+    font-weight: 800;
+    margin: 0 0 8px;
+  }
+
+  p {
+    margin: 0;
+  }
+}

@@ -2,6 +2,26 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+
+
+  &--current {
+    position: relative;
+
+    .site-nav__item {
+      &:hover {
+        &::after {
+          @include pseudo-elem;
+          background-image: url("../img/svg/icon-active-menu.svg");
+          background-repeat: no-repeat;
+          width: 55px;
+          height: 8px;
+          bottom: 20px;
+          margin-top: -5px;
+        }
+      }
+    }
+  }
 }
 
 .site-nav__item {
@@ -12,9 +32,15 @@
   }
 
   a {
-    text-decoration: none;
     display: flex;
-    padding: 24px 0;
+    padding: 14px 0;
+    text-decoration: none;
+
+    &:hover {
+      @include hover;
+      color: #fbec51;
+      margin-top: -5px;
+    }
   }
 }
 

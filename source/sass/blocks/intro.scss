@@ -1,0 +1,77 @@
+.intro {
+  background-color: #336f3f;
+  margin-top: 89px;
+  padding-bottom: 40px;
+}
+
+.intro__wrapper {
+  display: flex;
+  margin-bottom: 24px;
+  position: relative;
+
+  &::after {
+    @include pseudo-elem;
+    background-image: url("../img/index/company-products.png");
+    background-repeat: no-repeat;
+    width: 495px;
+    height: 269px;
+    bottom: -50px;
+    left: 0;
+  }
+}
+
+.intro__link {
+  display: flex;
+  width: 31.9%;
+  margin-right: 3.67%;
+}
+
+.intro__info {
+  background-color: #4f965d;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 64.4%;
+  position: relative;
+
+  &::before {
+    @include pseudo-elem;
+    background-image: url("../img/index/natural-composition-desktop.png");
+    background-repeat: no-repeat;
+    width: 195px;
+    height: 65px;
+    top: -13px;
+    right: 68px;
+  }
+
+  &::after {
+    @include pseudo-elem;
+    background-image: url("../img/index/cat-index-desktop.png");
+    background-repeat: no-repeat;
+    width: 192px;
+    height: 192px;
+    bottom: -108px;
+    right: 43px;
+  }
+
+  h2 {
+    @include font(22,26);
+    color: #ffffff;
+    margin: 0;
+    font-weight: 400;
+    padding: 40px 0 0 40px;
+    margin-bottom: 36px;
+  }
+
+  p {
+    @include font(68,61);
+    font-family: "CirceRounded", "Arial", sans-serif;
+    color: #fbfbfb;
+    margin: 0;
+    padding: 0 40px 40px;
+  }
+}
+
+.intro__image {
+  display: block;
+}
