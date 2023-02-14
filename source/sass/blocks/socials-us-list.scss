@@ -1,0 +1,19 @@
+.socials-us-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.socials-us-list__item {
+  margin-right: 36px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    display: flex;
+    width: 24px;
+    height: 24px;
+  }
+}

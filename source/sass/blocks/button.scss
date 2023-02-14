@@ -1,0 +1,6 @@
+.button {
+  @include font(16,16);
+  text-decoration: none;
+  text-align: center;
+  border-radius: 100px;
+}

@@ -1,0 +1,180 @@
+.navigation {
+  background-color: #f8f0d4;
+  color: #ffffff;
+  padding: 130px 0;
+  background-image: url("../img/index/navigation-bg.png");
+  background-repeat: no-repeat;
+  background-size: 43%;
+  background-position: 113px;
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url("../img/index/navigation-bg@2x.png");
+  }
+
+  @media (max-width: 1500px) {
+    background-size: 64%;
+    background-position: -162px 76px;
+  }
+
+  @media (max-width: $desktop-width) {
+    background-size: 80%;
+    background-position: center 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 550px;
+    padding-bottom: 100px;
+    background-image: url("../img/index/navigation-mobile-bg.png");
+    background-position: center 10px;
+    background-size: 370px;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../img/index/navigation-mobile-bg@2x.png");
+    }
+  }
+}
+
+.navigation__cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-height: 624px;
+
+  @media (max-width: $desktop-width) {
+    align-items: center;
+    margin-top: 550px;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 380px;
+    margin-top: 0;
+  }
+}
+
+.navigation__link {
+  background-color: #267435;
+  border-radius: 40px;
+  width: 45.58%;
+  min-height: 300px;
+  text-decoration: none;
+  display: flex;
+
+  &--catalog {
+    @include not-hover;
+    background-image: url("../img/index/navigation-link-catalog.png");
+    background-repeat: no-repeat;
+    background-position: right 120px;
+    background-size: 184px;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../img/index/navigation-link-catalog@2x.png");
+    }
+
+    @media (min-width: 1025px) {
+      &:hover {
+        @include hover;
+        background-color: #fbec51;
+        color: #3f3f3f;
+        background-image: url("../img/index/navigation-link-catalog-hover.png");
+        background-position-y: 0;
+        background-size: 475px;
+
+        @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+          background-image: url("../img/index/navigation-link-catalog-hover@2x.png");
+        }
+
+        @media (max-width: $tablet-width) {
+          padding: 0 16px;
+        }
+      }
+    }
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/index/navigation-link-catalog-mobile.png");
+      background-size: 210px;
+      background-position: right 83px;
+
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url("../img/index/navigation-link-catalog-mobile@2x.png");
+      }
+    }
+  }
+
+  &--partnership {
+    @include not-hover;
+    background-image: url("../img/index/navigation-link-partnership.png");
+    background-repeat: no-repeat;
+    background-position: right 0;
+    background-size: 184px;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../img/index/navigation-link-partnership@2x.png");
+    }
+
+    @media (min-width: 1025px) {
+      &:hover {
+        @include hover;
+        background-color: #fbec51;
+        color: #3f3f3f;
+        background-image: url("../img/index/navigation-link-partnership-hover.png");
+        background-position-y: 0;
+        background-size: 475px;
+
+        @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+          background-image: url("../img/index/navigation-link-partnership-hover@2x.png");
+        }
+      }
+    }
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/index/navigation-link-partnership-mobile.png");
+      background-size: 216px;
+
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url("../img/index/navigation-link-partnership-mobile@2x.png");
+      }
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 182px;
+  }
+}
+
+.navigation__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 230px 40px 40px;
+  width: 100%;
+
+  h3 {
+    @include font(60,54);
+    font-family: "CirceRounded", "Arial", sans-serif;
+    font-weight: 400;
+    margin: 0;
+
+    @media (max-width: $tablet-width) {
+      @include font(38,38);
+    }
+  }
+
+  span {
+    @include font(22,26);
+    font-weight: 800;
+
+    @media (max-width: $tablet-width) {
+      @include font(18,22);
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 24px 114px 25px 24px;
+  }
+}
+

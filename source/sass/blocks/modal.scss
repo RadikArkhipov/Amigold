@@ -1,0 +1,341 @@
+.modal {
+  animation-name: smooth;
+  animation-duration: 0.3s;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+  justify-content: center;
+  width: 100vw;
+  min-width: 320px;
+  max-height: 100vh;
+  padding: 220px 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &.modal--hidden {
+    display: none;
+  }
+}
+
+.modal__close {
+  @include button-reset;
+  @include not-hover;
+  position: absolute;
+  right: 0;
+  top: -56px;
+  width: 48px;
+  height: 48px;
+
+  &:hover {
+    @include hover;
+    opacity: 0.5;
+  }
+}
+
+@keyframes smooth {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.modal--show {
+  display: flex;
+
+  .modal__content {
+    animation-name: smooth;
+    animation-duration: 0.7s;
+  }
+}
+
+.modal__content {
+  @include font(18, 27);
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  max-width: 1360px;
+  margin: auto;
+  padding: 60px;
+  box-sizing: border-box;
+  background-color: #fcf9ed;
+  border-radius: 40px;
+  color: #3f3f3f;
+}
+
+.modal__title {
+  @include font(60, 60);
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "CirceRounded", "Arial", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.modal__intro {
+  max-width: 660px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.modal__quotation {
+  display: flex;
+  max-width: 1100px;
+  margin-bottom: 40px;
+  margin-left: auto;
+
+  p {
+    margin: 0;
+    margin-right: 3.64%;
+    width: 48.18%;
+
+    &:first-child {
+      position: relative;
+      padding-left: 94px;
+
+      &::before {
+        @include pseudo-elem;
+        top: 0;
+        left: 0;
+        width: 70px;
+        height: 53px;
+        background-image: url("../img/index/quotation.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+}
+
+.modal__mark {
+  @include font(40, 52);
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "CirceRounded", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.modal__img-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1100px;
+  margin-bottom: 40px;
+  margin-left: auto;
+
+  img {
+    width: 48.2%;
+    border-radius: 40px;
+    margin-right: 3.7%;
+    object-fit: cover;
+  }
+
+  p {
+    width: 48.1%;
+    margin: 0;
+  }
+}
+
+.modal__text-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  p {
+    width: 48.4%;
+    margin: 0;
+    margin-right: 3.2%;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.modal__photo-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 40px;
+
+  p {
+    @include font(40, 52);
+    width: 60%;
+    margin: 0;
+    margin-right: 2.5%;
+    font-family: "CirceRounded", "Arial", sans-serif;
+    text-transform: uppercase;
+  }
+
+  img {
+    width: 37.5%;
+    object-fit: cover;
+    border-radius: 40px
+  }
+}
+
+.modal__question {
+  @include font(40, 52);
+  position: relative;
+  max-width: 1100px;
+  margin: 0;
+  margin-left: auto;
+  padding-right: 94px;
+  font-family: "CirceRounded", "Arial", sans-serif;
+  text-transform: uppercase;
+
+  &::after {
+    @include pseudo-elem;
+    top: 0;
+    right: 0;
+    transform: rotate(180deg);
+    width: 70px;
+    height: 53px;
+    background-image: url("../img/index/quotation.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .modal {
+    padding: 100px 50px;
+  }
+
+  .modal__content {
+    @include font(16, 24);
+    padding: 40px 30px;
+  }
+
+  .modal__title {
+    @include font(45, 45);
+  }
+
+  .modal__mark {
+    @include font(24, 28);
+  }
+
+  .modal__img-content {
+    img {
+      border-radius: 30px;
+    }
+  }
+
+  .modal__photo-content {
+    p {
+      @include font(24, 28);
+    }
+
+    img {
+      border-radius: 30px;
+    }
+  }
+
+  .modal__question {
+    @include font(24, 28);
+  }
+
+}
+
+@media (max-width: $tablet-width) {
+  .modal {
+    padding: 66px 16px;
+  }
+
+  .modal__content {
+    @include font(16, 24);
+    padding: 40px 16px;
+  }
+
+  .modal__title {
+    @include font(38, 38);
+  }
+
+  .modal__quotation {
+    position: relative;
+    flex-direction: column;
+    padding-left: 64px;
+
+    p {
+      margin-right: 0;
+      margin-bottom: 24px;
+      width: 100%;
+
+      &:first-child {
+        position: static;
+        padding-left: 0;
+
+        &::before {
+          width: 40px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .modal__mark {
+    @include font(18, 23);
+  }
+
+  .modal__img-content {
+    flex-direction: column;
+    padding-left: 64px;
+
+    img {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 40px;
+      border-radius: 24px;
+    }
+
+    p {
+      width: 100%;
+    }
+  }
+
+  .modal__text-content {
+    flex-direction: column;
+
+    p {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 40px;
+
+      &:nth-child(2n) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .modal__photo-content {
+    flex-direction: column;
+
+    p {
+      @include font(18, 24);
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 40px;
+      padding-left: 64px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 24px;
+    }
+  }
+
+  .modal__question {
+    @include font(18, 24);
+    padding-right: 64px;
+
+    &::after {
+      width: 40px;
+      height: 30px;
+    }
+  }
+}

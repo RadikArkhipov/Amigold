@@ -1,0 +1,52 @@
+.contacts {
+  @include font(18,27);
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 491px;
+  background-color: #336e3f;
+  padding: 40px 16px;
+  display: none;
+
+  h4 {
+    @include font(18,27);
+    font-weight: 800;
+    margin: 0 0 8px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.contacts__address {
+  margin-bottom: 40px;
+}
+
+.contacts__contact-us {
+  display: flex;
+
+  a {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.contacts__call-us {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.contacts__message-us {
+  display: flex;
+  flex-direction: column;
+}

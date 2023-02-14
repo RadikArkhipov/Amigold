@@ -1,7 +1,7 @@
 .intro {
   background-color: #336f3f;
-  margin-top: 89px;
-  padding-bottom: 40px;
+  padding: 26px 0 40px;
+  min-height: 100vh;
 }
 
 .intro__wrapper {
@@ -17,13 +17,39 @@
     height: 269px;
     bottom: -50px;
     left: 0;
+
+    @media (max-width: 1500px) {
+      width: 330px;
+      height: 269px;
+      bottom: -50px;
+      background-size: contain;
+    }
+
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    flex-direction: column;
   }
 }
 
-.intro__link {
+.intro__logo {
   display: flex;
   width: 31.9%;
   margin-right: 3.67%;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 33px;
+
+    svg {
+      width: 244px;
+      height: 76px;
+    }
+  }
 }
 
 .intro__info {
@@ -42,6 +68,15 @@
     height: 65px;
     top: -13px;
     right: 68px;
+
+    @media (max-width: $tablet-width) {
+      background-image: url("../img/index/natural-composition-mobile.png");
+      background-size: contain;
+      width: 160px;
+      height: 56px;
+      top: -29px;
+      right: 46px;
+    }
   }
 
   &::after {
@@ -52,6 +87,20 @@
     height: 192px;
     bottom: -108px;
     right: 43px;
+
+    @media (max-width: 1500px) {
+      width: 150px;
+      height: 150px;
+      bottom: -95px;
+      right: 18px;
+      background-size: contain;
+    }
+
+    @media (max-width: $tablet-width) {
+      width: 88px;
+      height: 88px;
+      bottom: -53px;
+    }
   }
 
   h2 {
@@ -61,6 +110,12 @@
     font-weight: 400;
     padding: 40px 0 0 40px;
     margin-bottom: 36px;
+
+    @media (max-width: $tablet-width) {
+      @include font(18,22);
+      padding: 40px 33px 0 20px;
+      margin-bottom: 24px;
+    }
   }
 
   p {
@@ -69,6 +124,19 @@
     color: #fbfbfb;
     margin: 0;
     padding: 0 40px 40px;
+
+    @media (max-width: 1500px) {
+      @include font(58,51);
+    }
+
+    @media (max-width: $tablet-width) {
+      @include font(42,38);
+      padding: 0 20px 40px 20px;
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
   }
 }
 

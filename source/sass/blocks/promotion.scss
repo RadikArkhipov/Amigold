@@ -1,0 +1,150 @@
+.promotion {
+  background-color: #f8f0d4;
+  position: relative;
+  overflow: hidden;
+}
+
+.promotion__container {
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  h2 {
+    @include font(60,54);
+    font-family: "CirceRounded", "Arial", sans-serif;
+    font-weight: 400;
+    margin: 0 0 40px;
+
+    @media (max-width: $tablet-width) {
+      @include font(38,38);
+    }
+  }
+}
+
+.promotion__slider {
+  @include list-reset;
+  display: flex;
+  width: 1996px;
+}
+
+.promotion__link {
+  text-decoration: none;
+
+  img {
+    display: block;
+
+    @media (max-width: $tablet-width) {
+      width: 260px;
+      height: 156px;
+    }
+  }
+}
+
+.promotion__slide {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  min-height: 328px;
+  margin-right: 24px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 260px;
+    min-height: 304px;
+  }
+}
+
+.promotion__description {
+  display: flex;
+  flex-direction: column;
+  min-height: 98px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 148px;
+  }
+
+  h4 {
+    @include font(22,26);
+    font-weight: 800;
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: auto;
+
+    @media (max-width: $tablet-width) {
+      @include font(18,22);
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.promotion__button {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    box-shadow: inset 0 0 0 1px #336f3f;
+    color: #336f3f;
+    display: flex;
+    padding: 15px 32px;
+    width: 146px;
+
+    &:hover {
+      background-color: #336f3f;
+      color: #ffffff;
+    }
+  }
+}
+
+.promotion__slider-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 148px;
+  position: absolute;
+  right: 14.5%;
+  top: 135px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.promotion__slider-btn {
+  @include not-hover;
+  width: 70px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    @include hover;
+    background-color: #fcf9ed;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0.4;
+
+  svg {
+    stroke: #3f3f3fb3;
+
+    &:hover {
+      stroke: #3f3f3f;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

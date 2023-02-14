@@ -4,23 +4,15 @@
   flex-wrap: wrap;
   margin: 0;
 
-
-  &--current {
-    position: relative;
-
-    .site-nav__item {
-      &:hover {
-        &::after {
-          @include pseudo-elem;
-          background-image: url("../img/svg/icon-active-menu.svg");
-          background-repeat: no-repeat;
-          width: 55px;
-          height: 8px;
-          bottom: 20px;
-          margin-top: -5px;
-        }
-      }
-    }
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    flex-direction: column;
+    padding: 0 0 90px 16px;
+    right: 0;
+    background-color: rgba(79, 150, 93, 1);
+    width: 100%;
+    top: 115px;
+    display: none;
   }
 }
 
@@ -31,20 +23,49 @@
     margin-right: 0;
   }
 
-  a {
-    display: flex;
-    padding: 14px 0;
-    text-decoration: none;
+  @media (max-width: 850px) {
+    margin-right: 40px;
+  }
 
-    &:hover {
-      @include hover;
-      color: #fbec51;
-      margin-top: -5px;
+  a {
+    @include not-hover;
+    display: flex;
+    padding: 12px 0;
+    text-decoration: none;
+    position: relative;
+
+    @media (min-width: 1025px) {
+      &:hover {
+        @include hover;
+        color: #fbec51;
+        margin-top: -5px;
+
+        &::after {
+          @include pseudo-elem;
+          background-image: url("../img/svg/icon-active-menu.svg");
+          background-repeat: no-repeat;
+          width: 55px;
+          height: 8px;
+          bottom: 7px;
+        }
+      }
     }
   }
 }
 
-
 .site-nav__toggle {
+  background-image: url("../img/svg/icon-white-burger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
   display: none;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+  }
 }
+

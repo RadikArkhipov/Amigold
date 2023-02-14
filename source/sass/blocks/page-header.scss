@@ -1,19 +1,32 @@
 .page-header {
-  line-height: 16px;
+  @include font(16,16);
   background-color: #336f3f;
   color: #ffffff;
   margin-bottom: 24px;
+  margin-top: 16px;
+  position: relative;
 
   &--index {
-    position: absolute;
     width: 100%;
-    padding-bottom: 26px;
-    margin-bottom: 0;
+    margin-bottom: -1px;
+    margin-top: 0;
+    color: #ffffff;
 
     .page-header__container {
       justify-content: flex-end;
       border-radius: 0;
-      padding: 10px 0;
+      background-color: #336f3f;
+      max-width: 1560px;
+      padding: 12px 100px;
+
+      @media (max-width: $desktop-width) {
+        padding-right: 45px;
+        padding-left: 45px;
+      }
+
+      @media (max-width: $tablet-width) {
+        padding: 8px 20px;
+      }
     }
 
     .page-header__link {
@@ -21,6 +34,71 @@
       margin-left: 40px;
       margin-right: auto;
     }
+
+    .site-nav__item {
+      @media (max-width: 850px) {
+        margin-right: 60px;
+      }
+    }
+
+    .site-nav__toggle {
+      background-image: url("../img/svg/icon-index-burger.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 48px;
+      height: 48px;
+      border: 0;
+      outline: 0;
+      padding: 18px 14px;
+      border-radius: 16px;
+      background-color: #fbec51;
+      display: none;
+
+      @media (max-width: $tablet-width) {
+        display: flex;
+      }
+    }
+  }
+}
+
+.page-header--nav-open {
+  z-index: 1;
+  height: 100vh;
+  background-color: #4f965d;
+  padding: 13px 16px 40px;
+
+  .site-nav__list {
+    display: flex;
+  }
+
+  .site-nav__item {
+    margin-right: 0;
+    margin-bottom: 15px;
+
+    a {
+      @include font(32,32);
+    }
+  }
+
+  .site-nav__toggle {
+    background-image: url("../img/svg/icon-cross.svg");
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+  }
+
+  .page-header__container {
+    border-radius: 24px;
+    padding: 7px 4px 9px 24px;
+  }
+
+  .page-header__link {
+    display: flex;
+    margin-left: 0;
+  }
+
+  .contacts {
+    display: flex;
   }
 }
 
@@ -30,11 +108,33 @@
   padding: 16px 40px;
   align-items: center;
   border-radius: 24px;
+  background-color: #336f3f;
+
+  @media (max-width: 1560px) {
+    max-width: 87.18%;
+  }
+
+  @media (max-width: $desktop-width) {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 7px 4px 9px 24px;
+  }
 }
+
 
 .page-header__link {
   display: flex;
   margin-right: auto;
+
+  @media (max-width: $tablet-width) {
+    svg {
+      width: 116px;
+      height: 36px;
+    }
+  }
 }
 
 .page-header__site-nav {
