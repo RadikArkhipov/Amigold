@@ -28,7 +28,6 @@
 .promotion__slider {
   @include list-reset;
   display: flex;
-  width: 1996px;
 }
 
 .promotion__link {
@@ -47,6 +46,7 @@
 .promotion__slide {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   width: 380px;
   min-height: 328px;
   margin-right: 24px;
@@ -64,18 +64,12 @@
 .promotion__description {
   display: flex;
   flex-direction: column;
-  min-height: 98px;
-
-  @media (max-width: $tablet-width) {
-    min-height: 148px;
-  }
+  flex-grow: 1;
 
   h4 {
     @include font(22,26);
     font-weight: 800;
-    margin: 0;
-    margin-top: 16px;
-    margin-bottom: auto;
+    margin: 16px 0 8px;
 
     @media (max-width: $tablet-width) {
       @include font(18,22);
@@ -84,10 +78,15 @@
 
   p {
     margin: 0;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: auto;
+    }
   }
 }
 
 .promotion__button {
+  @include not-hover;
   display: none;
 
   @media (max-width: $tablet-width) {
@@ -96,11 +95,7 @@
     display: flex;
     padding: 15px 32px;
     width: 146px;
-
-    &:hover {
-      background-color: #336f3f;
-      color: #ffffff;
-    }
+    margin-top: 8px;
   }
 }
 

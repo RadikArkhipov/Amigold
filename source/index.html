@@ -134,18 +134,21 @@
     </div>
     <header class="page-header page-header--index">
       <div class="container page-header__container">
-        <a class="page-header__link" aria-label="Логотип компании «Амиго»">
-          <svg width="142" height="44">
-            <use href="#logo"></use>
-          </svg>
-        </a>
+        <div class="page-header__logo-wrapper">
+          <a class="page-header__logo" aria-label="Логотип компании «Амиго»">
+            <svg width="142" height="44">
+              <use href="#logo"></use>
+            </svg>
+          </a>
+          <button class="page-header__nav-toggle js_open-menu" type="button" aria-label="Открыть меню"></button>
+        </div>
         <nav class="page-header__site-nav site-nav">
           <ul class="site-nav__list">
             <li class="site-nav__item">
-              <a>О нас</a>
+              <a href="#">О нас</a>
             </li>
             <li class="site-nav__item">
-              <a href="#">Каталог</a>
+              <a href="catalog.html">Каталог</a>
             </li>
             <li class="site-nav__item">
               <a href="#">Стать партнёром</a>
@@ -154,9 +157,9 @@
               <a href="#">Контакты</a>
             </li>
           </ul>
-          <button class="site-nav__toggle js-open-menu" type="button" aria-label="Открыть меню"></button>
         </nav>
-        <div class="page-header__contacts contacts">
+      </div>
+      <div class="page-header__contacts contacts">
           <div class="contacts__address">
             <h4>Адрес:</h4>
             <p>г. Москва, ул Ратная д. 10, корп 2, пом. XIII</p>
@@ -196,12 +199,11 @@
             </div>
           </div>
         </div>
-      </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Производство кормов для собак и кошек премиум класса «Amigold»</h1>
       <section class="intro">
-        <div class="container">
+        <div class="container intro__container">
           <div class="intro__wrapper">
             <a class="intro__logo" aria-label="Логотип компании «Амиго»">
               <svg width="434" height="134">
@@ -210,7 +212,7 @@
             </a>
             <div class="intro__info">
               <h2>Сухие полнорационные корма для кошек и собак</h2>
-              <p>Монобелковая рецептура без глютена и искусственных ингредиентов</p>
+              <p>Монобелковая рецептура без глютена и искусственных ингредиентов</p>
             </div>
           </div>
           <img class="intro__image" src="img/index/dog-desktop.png" srcset="img/index/dog-desktop@2x.png 2x" width="1360" height="540" alt="Изображение собаки в поле">
@@ -265,8 +267,9 @@
           </div>
         </div>
         <div class="container advantages__image-container">
-          <img src="img/index/cat-desktop.png" srcset="img/index/cat-desktop@2x.png 2x" width="1360" height="640" alt="Изображение кошки">
-          <h3>«Amigold» — идеальный рацион для тех, кто выбирает для любимца лучшее!</h3>
+          <div class="banner" style="background-image: url(img/index/cat-desktop@2x.png);">
+            <h3>«Amigold»  — <br> идеальный рацион для тех, кто выбирает для любимца лучшее!</h3>
+          </div>
         </div>
         <div class="container  advantages__composition composition">
           <h3>В составе каждого <br> корма</h3>
@@ -304,7 +307,7 @@
       <section class="production">
         <div class="container production__container">
           <h2>О производстве</h2>
-          <p class="production__text">Компания «Амиго» — признанный эксперт зоосферы, знающий потребности владельцев. Именно отвечая на запрос самых взыскательных хозяев и их питомцев мы запустили собственное производство кормов для собак и кошек супер-премиум класса «Amigold». Также нас вдохновила наша муза, кошка Машка, и ниже вы можете <a href="#">прочитать её историю.</a></p>
+          <p class="production__text">Компания «Амиго» — признанный эксперт зоосферы, знающий потребности владельцев. Именно отвечая на запрос самых взыскательных хозяев и их питомцев мы запустили собственное производство кормов для собак и кошек супер-премиум класса «Amigold». Также нас вдохновила наша муза, кошка Машка, и ниже вы можете <a class="js_open-story-modal">прочитать её историю.</a></p>
           <img class="production__image" src="img/index/production-img.png" srcset="img/index/production-img@2x.png 2x" width="1360" height="360" alt="Изображение корма в сушильной камере">
           <div class="production__description">
             <p>Наш завод находится в Московской области. Современное оборудование и высокая степень автоматизации процессов позволяет производить рационы, качество которых соответствует самым высоким международным стандартам.</p>
@@ -345,8 +348,9 @@
       </section>
       <section class="croquet">
         <div class="container croquet__container">
-          <img src="img/index/croquet-bg.png" srcset="img/index/croquet-bg@2x.png 2x" width="1360" height="640" alt="Изображение девушки с собакой">
-          <h3>«Amigold» — неизменно высокое качество в каждом крокете</h3>
+          <div class="banner" style="background-image: url(img/index/croquet-bg@2x.png);">
+            <h3>«Amigold» — <br> неизменно высокое качество в каждом крокете</h3>
+          </div>
         </div>
       </section>
       <section class="promotion">

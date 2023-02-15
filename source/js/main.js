@@ -1,5 +1,5 @@
 const pageHeader = document.querySelector('.page-header');
-const navToggle = document.querySelector('.site-nav__toggle');
+const navToggle = document.querySelector('.js_open-menu');
 
 navToggle.addEventListener('click', function() {
   pageHeader.classList.toggle('page-header--nav-open');
@@ -94,6 +94,5 @@ function onOpenModalButtonClick(evt, currentModal, successModal = ``) {
       onOpenModalButtonClick(evt, storyModal);
     })
   }
-
 })();
 

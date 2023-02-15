@@ -1,11 +1,26 @@
 .composition {
   background-image: url("../img/composition-bg.png");
   background-repeat: no-repeat;
-  background-position: 311px 37px;
+  background-position: center;
   background-size: 60.7%;
 
   @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url("../img/composition-bg@2x.png");
+  }
+
+
+  @media (max-width: 1400px) {
+    background-size: 52.7%;
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/composition-bg-mobile.png"), url("../img/composition-round-bg-mobile.png");
+    background-size:  auto;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../img/composition-bg-mobile@2x.png");
+      background-size: 100%;
+    }
   }
 
   h3 {
@@ -21,30 +36,6 @@
     }
   }
 
-  @media (max-width: 1400px) {
-    background-size: 52.7%;
-    background-position: 311px 120px;
-  }
-
-  @media (max-width: 1300px) {
-    background-size: 52.7%;
-    background-position: 240px 195px;
-  }
-
-  @media (max-width: $desktop-width) {
-    background-size: 52.7%;
-    background-position: 192px 273px;
-  }
-
-  @media (max-width: $tablet-width) {
-    background-image: url("../img/composition-bg-mobile.png");
-
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url("../img/composition-bg-mobile@2x.png");
-      background-position: center 18px;
-      background-size: 100%;
-    }
-  }
 }
 
 .composition__slider {
@@ -54,7 +45,6 @@
 
   @media (max-width: $tablet-width) {
     flex-wrap: nowrap;
-    width: 1246px;
   }
 }
 
@@ -65,6 +55,7 @@
   min-height: 366px;
 
   @media (max-width: $tablet-width) {
+    flex-shrink: 0;
     width: 230px;
     min-height: 310px;
   }

@@ -1,13 +1,10 @@
 .contacts {
   @include font(18,27);
-  flex-direction: column;
-  position: absolute;
-  width: 100%;
-  right: 0;
-  top: 491px;
-  background-color: #336e3f;
-  padding: 40px 16px;
   display: none;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px 16px;
+  background-color: #336e3f;
 
   h4 {
     @include font(18,27);

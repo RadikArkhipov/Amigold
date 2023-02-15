@@ -2,9 +2,23 @@
   background-color: #f8f0d4;
   padding-top: 130px;
   padding-bottom: 130px;
+
+  @media (max-width: $desktop-width) {
+    overflow: hidden;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.advantages__description {
+  padding-bottom: 148px;
+
   background-image: url("../img/description-bg.png");
   background-repeat: no-repeat;
-  background-position: 150px 270px;
+  background-position: left 130px;
 
   @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url("../img/description-bg@2x.png");
@@ -12,13 +26,12 @@
   }
 
   @media (max-width: $desktop-width) {
-    overflow: hidden;
-    background-size: 0;
+    background-image: none;
   }
-}
 
-.advantages__description {
-  padding-bottom: 148px;
+  @media (max-width: $tablet-width) {
+    padding-bottom: 90px;
+  }
 
   h2 {
     @include font(60,60);
@@ -30,6 +43,7 @@
 
     @media (max-width: $tablet-width) {
       @include font(38,38);
+      margin-bottom: 90px;
     }
   }
 }
@@ -43,11 +57,8 @@
 
   @media (max-width: $desktop-width) {
     flex-wrap: nowrap;
-    width: 1996px;
-  }
-
-  @media (max-width: $tablet-width) {
-    width: 1486px;
+    justify-content: flex-start;
+    width: 100%;
   }
 }
 
@@ -55,6 +66,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0;
   width: 30.44%;
   margin-right: 4.33%;
   margin-bottom: 110px;
@@ -79,7 +91,6 @@
   }
 
   &:nth-child(4) {
-    margin-right: 4.41%;
     margin-bottom: 0;
   }
 
@@ -220,41 +231,9 @@
 }
 
 .advantages__image-container {
-  color: #ffffff;
   margin-bottom: 130px;
-  position: relative;
 
-  img {
-    display: block;
-
-    @media (max-width: $tablet-width) {
-      min-height: 600px;
-      object-fit: cover;
-    }
-  }
-
-  h3 {
-    @include font(40,52);
-    font-family: "CirceRounded", "Arial", sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    position: absolute;
-    text-align: center;
-    bottom: 40px;
-    padding: 0 63px;
-    margin: 0 100px 0 0;
-
-    @media (max-width: 1250px) {
-      font-size: 35px;
-      line-height: 42px;
-      bottom: 10px;
-    }
-
-    @media (max-width: $tablet-width) {
-      @include font(22,29);
-      margin: 0 29px;
-      padding: 0;
-      left: 0;
-    }
+  @media (max-width: $tablet-width) {
+    margin-bottom: 100px;
   }
 }

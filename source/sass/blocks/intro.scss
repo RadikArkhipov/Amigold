@@ -1,7 +1,19 @@
 .intro {
+  display: flex;
+  flex-direction: column;
   background-color: #336f3f;
-  padding: 26px 0 40px;
+  padding: 90px 0 40px;
   min-height: 100vh;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 78px;
+  }
+}
+
+.intro__container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .intro__wrapper {
@@ -39,6 +51,17 @@
   display: flex;
   width: 31.9%;
   margin-right: 3.67%;
+
+
+
+  @media (max-width: $desktop-width) {
+    margin-right: 0;
+    margin-bottom: 20px;
+
+    svg {
+      height: auto;
+    }
+  }
 
   @media (max-width: $tablet-width) {
     width: 100%;
@@ -141,5 +164,8 @@
 }
 
 .intro__image {
+  flex-grow: 1;
   display: block;
+  object-fit: cover;
+  border-radius: 40px;
 }

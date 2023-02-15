@@ -1,0 +1,33 @@
+.banner-catalog {
+  color: #ffffff;
+
+  div {
+    min-height: 500px;
+    display: flex;
+    border-radius: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $tablet-width) {
+      min-height: 200px;
+    }
+  }
+
+
+  h2 {
+    @include font(68,68);
+    font-family: "CirceRounded", "Arial", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+    opacity: 0.68;
+
+    @media (max-width: $tablet-width) {
+      @include font(42,42);
+      opacity: 1;
+    }
+  }
+}

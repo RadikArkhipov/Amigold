@@ -1,18 +1,17 @@
+.site-nav {
+  @media (max-width: $tablet-width) {
+    display: none;
+    width: 100%;
+  }
+}
+
 .site-nav__list {
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
 
   @media (max-width: $tablet-width) {
-    position: absolute;
     flex-direction: column;
-    padding: 0 0 90px 16px;
-    right: 0;
-    background-color: rgba(79, 150, 93, 1);
-    width: 100%;
-    top: 115px;
-    display: none;
   }
 }
 
@@ -51,9 +50,18 @@
       }
     }
   }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+    margin-bottom: 16px;
+
+    a {
+      @include font(32,32);
+    }
+  }
 }
 
-.site-nav__toggle {
+.page-header__nav-toggle {
   background-image: url("../img/svg/icon-white-burger.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -68,4 +76,3 @@
     display: flex;
   }
 }
-

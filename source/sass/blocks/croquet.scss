@@ -1,51 +1,13 @@
 .croquet {
   background-color: #fcf9ed;
-  color: #ffffff;
 }
 
 .croquet__container {
   padding-top: 130px;
   padding-bottom: 130px;
-  position: relative;
 
   @media (max-width: $tablet-width) {
     padding-top: 100px;
     padding-bottom: 80px;
   }
-
-  img {
-    display: block;
-
-    @media (max-width: $tablet-width) {
-      min-height: 600px;
-      object-fit: cover;
-    }
-  }
-
-  h3 {
-    @include font(40,52);
-    font-family: "CirceRounded", "Arial", sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin: 0;
-    position: absolute;
-    text-align: center;
-    bottom: 173px;
-    padding: 0 125px;
-    margin-right: 100px;
-
-    @media (max-width: 1250px) {
-      @include font(35,42);
-      padding: 0 25px;
-      bottom: 141px;
-    }
-
-    @media (max-width: $tablet-width) {
-      @include font(22,29);
-      margin: 0;
-      padding: 0;
-      left: 0;
-    }
-  }
 }
-
