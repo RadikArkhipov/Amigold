@@ -1,0 +1,40 @@
+.breadcrumbs {
+  margin-bottom: 60px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 24px;
+  }
+}
+
+.breadcrumbs__list {
+  @include list-reset;
+  @include font(14,20);
+  color: #707070;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    margin-right: 20px;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+      opacity: 0.5;
+    }
+
+    &:not(:last-child)::after {
+      @include pseudo-elem;
+      background-image: url("../img/svg/icon-breadcrumbs-arrow.svg");
+      background-repeat: no-repeat;
+      width: 6px;
+      height: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -12px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

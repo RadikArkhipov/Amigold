@@ -25,6 +25,10 @@
   }
 }
 
+.promotion__slider-container {
+  position: relative;
+}
+
 .promotion__slider {
   @include list-reset;
   display: flex;
@@ -104,8 +108,8 @@
   justify-content: space-between;
   width: 148px;
   position: absolute;
-  right: 14.5%;
-  top: 135px;
+  right: 0;
+  top: -88px;
 
   @media (max-width: $tablet-width) {
     display: none;

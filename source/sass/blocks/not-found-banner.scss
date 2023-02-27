@@ -1,0 +1,92 @@
+.not-found-banner {
+  padding-bottom: 130px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 100px;
+  }
+
+  div {
+    min-height: 588px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    border-radius: 40px;
+    background-image: url("../img/not-found-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../img/not-found-banner@2x.jpg");
+    }
+
+    @media (max-width: $tablet-width) {
+      min-height: 661px;
+      padding: 25px;
+      background-image: url("../img/not-found-banner-mobile.jpg");
+      background-position: center bottom;
+
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url("../img/not-found-banner-mobile@2x.jpg");
+      }
+    }
+  }
+
+  span {
+    @include font(16, 19);
+    margin-bottom: 114px;
+    color: #707070;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 57px;
+    }
+  }
+
+  h1 {
+    @include font(68,68);
+    max-width: 736px;
+    font-family: "CirceRounded", "Arial", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 40px;
+    color: #3f3f3f;
+
+    br {
+      display: none;
+    }
+
+    @media (max-width: $desktop-width) {
+      @include font(50,50);
+      max-width: 600px;
+    }
+
+    @media (max-width: $tablet-width) {
+      @include font(42,42);
+      max-width: 450px;
+
+      br {
+        display: block;
+      }
+    }
+  }
+
+  p {
+    @include font(22,33);
+    margin: 0;
+
+    @media (max-width: $tablet-width) {
+      @include font(18,27);
+    }
+
+    a {
+      @include not-hover;
+      text-underline-offset: 4px;
+
+      &:hover {
+        @include hover;
+        opacity: 0.7;
+      }
+    }
+  }
+}

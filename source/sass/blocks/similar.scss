@@ -1,0 +1,45 @@
+.similar {
+  @include font(22,29);
+  background-color: #f8f0d4;
+
+  @media (max-width: 1450px) {
+    @include font(20,25);
+  }
+
+  @media (max-width: 1340px) {
+    @include font(18,22);
+  }
+
+  @media (max-width: 1240px) {
+    @include font(16,20);
+  }
+
+  @media (max-width: $desktop-width) {
+    @include font(17,22);
+  }
+
+  @media (max-width: $tablet-width) {
+    @include font(16,21);
+  }
+
+  h2 {
+    @include font(60,60);
+    font-family: "CirceRounded", "Arial", sans-serif;
+    font-weight: 400;
+    margin: 0 0 40px;
+
+    @media (max-width: $tablet-width) {
+      @include font(36,36);
+    }
+  }
+}
+
+.similar__container {
+  padding-top: 130px;
+  padding-bottom: 90px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 84px;
+  }
+}

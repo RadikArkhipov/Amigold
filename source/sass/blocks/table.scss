@@ -1,0 +1,41 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+
+  tr {
+    td {
+      border: 1px solid #3f3f3f;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    &:first-child {
+      td {
+        border-top: none;
+      }
+    }
+
+    &:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.table__parameter {
+  padding: 23px 16px 27px 24px;
+}
+
+.table__meaning {
+  @include font(18,18);
+  padding: 29px 8px 31px;
+  text-align: center;
+}

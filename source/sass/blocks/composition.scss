@@ -8,18 +8,17 @@
     background-image: url("../img/composition-bg@2x.png");
   }
 
-
   @media (max-width: 1400px) {
     background-size: 52.7%;
   }
 
   @media (max-width: $tablet-width) {
     background-image: url("../img/composition-bg-mobile.png"), url("../img/composition-round-bg-mobile.png");
-    background-size:  auto;
+    background-size: auto;
 
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url("../img/composition-bg-mobile@2x.png");
-      background-size: 100%;
+      background-image: url("../img/composition-bg-mobile@2x.png"), url("../img/composition-round-bg-mobile.png");
+      background-size: 360px auto, 565px auto;
     }
   }
 
@@ -35,7 +34,6 @@
       margin-bottom: 377px;
     }
   }
-
 }
 
 .composition__slider {

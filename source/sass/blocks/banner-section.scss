@@ -1,0 +1,64 @@
+.banner-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    min-height: 500px;
+    display: flex;
+    padding: 40px;
+    border-radius: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
+
+    @media (max-width: $desktop-width) {
+      min-height: 350px;
+      padding: 30px;
+    }
+
+    @media (max-width: $tablet-width) {
+      min-height: 200px;
+      margin-bottom: 40px;
+      padding: 20px;
+    }
+  }
+
+  h1 {
+    @include font(68,68);
+    font-family: "CirceRounded", "Arial", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+
+    @media (max-width: $desktop-width) {
+      @include font(50,50);
+    }
+
+    @media (max-width: $tablet-width) {
+      @include font(42,42);
+    }
+  }
+
+  p {
+    @include font(18,27);
+    max-width: 660px;
+    margin: 0;
+
+    @media (max-width: $tablet-width) {
+      @include font(16,24);
+    }
+
+    a {
+      color: #267435;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+}

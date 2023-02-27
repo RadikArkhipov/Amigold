@@ -7,10 +7,10 @@
   top: 0;
   bottom: 0;
   z-index: 20;
+  display: flex;
   justify-content: center;
   width: 100vw;
-  min-width: 320px;
-  max-height: 100vh;
+  min-width: 360px;
   padding: 220px 100px;
   background-color: rgba(0, 0, 0, 0.7);
   overflow-x: hidden;
@@ -254,6 +254,7 @@
 
   .modal__title {
     @include font(38, 38);
+    margin-bottom: 24px;
   }
 
   .modal__quotation {
@@ -336,6 +337,117 @@
     &::after {
       width: 40px;
       height: 30px;
+    }
+  }
+}
+
+.modal--application,
+.modal--contacts {
+
+  .modal__content {
+    max-width: 850px;
+    p {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+.modal--promotion {
+  .modal__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 850px;
+
+    img {
+      margin-bottom: 40px;
+      border-radius: 40px;
+    }
+
+    span {
+      @include font(18, 18);
+      align-self: flex-start;
+      margin-bottom: 40px;
+      padding: 10px 16px;
+      background-color: #fbec51;
+      border-radius: 8px;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+@media (max-width: $tablet-width) {
+  .modal--promotion {
+    .modal__content {
+      img {
+        margin-bottom: 24px;
+        border-radius: 24px;
+        object-fit: cover;
+      }
+
+      span {
+        @include font(14, 14);
+        margin-bottom: 24px;
+      }
+
+      p {
+        @include font(16, 24);
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.modal--gallery {
+  .product {
+    max-width: 730px;
+    margin: 0 auto;
+  }
+
+  .product__slide {
+    padding: 40px 119px;
+  }
+
+  .product__slider-btn--prev {
+    left: 20px;
+  }
+
+  .product__slider-btn--next {
+    right: 20px;
+  }
+
+  .product__thumbs-slide {
+    width: 80px;
+    height: 80px;
+
+    img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .modal--gallery {
+    .product__slide {
+      padding: 40px 80px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .modal--gallery {
+    .product__slide {
+      padding: 30px;
     }
   }
 }

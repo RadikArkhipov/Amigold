@@ -237,3 +237,39 @@
     margin-bottom: 100px;
   }
 }
+
+.advantages--club {
+  background-color: unset;
+
+  .advantages__description {
+    padding-bottom: 0;
+    background-image: none;
+
+    h2 {
+      margin-bottom: 110px;
+    }
+
+    @media (max-width: $tablet-width) {
+      h2 {
+        @include font(36, 36);
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+  .advantages__slide {
+    min-height: auto;
+
+    &::after {
+      display: none;
+    }
+
+    span {
+      border-color: #fcf9ed;
+    }
+
+    p {
+      padding-bottom: 24px;
+    }
+  }
+}
